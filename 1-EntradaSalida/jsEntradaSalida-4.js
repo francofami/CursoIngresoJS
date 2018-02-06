@@ -4,6 +4,11 @@
 */
 function Mostar()
 {
-	
+	var nombre;
+	nombre=prompt("Ingrese su nombre: ");
+	document.getElementById('elNombre').value=nombre; 
+	//Al poner la variable al final va a hacer que lo que este en ella aparezca en la parte de la izquierda del igual.
+
+
 }
 
