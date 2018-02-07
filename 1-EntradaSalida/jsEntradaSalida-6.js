@@ -5,13 +5,16 @@ function sumar()
 {
 	var numeroUno;
 	var numeroDos;
+	var resultado;
 
-	numeroUno=document.getElementById('numeroUno').value;
-	numeroDos=document.getElementById('numeroDos').value;
+	numeroUno = document. getElementById('numeroUno').value;
+	numeroDos = document .getElementById('numeroDos').value;
+	
+	numeroUno = parseInt(numeroUno);
+	numeroDos = parseInt(numeroDos);
 
+	resultado = numeroUno + numeroDos;
 
-	suma=parseInt(numeroUno)+parseInt(numeroDos);
-
-	alert("la suma es "+suma);
+	alert("La suma de los numeros es: "+resultado);
 }
 
