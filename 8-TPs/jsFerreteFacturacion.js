@@ -24,7 +24,7 @@ function Promedio ()
 	precioTres=document.getElementById('PrecioTres').value;
 
 	sumaproductos = parseFloat(precioUno) + parseFloat(precioDos) + parseFloat(precioTres);
-	promedio = parseFloat(sumaproductos) / 3;
+	promedio = sumaproductos / 3;
 	alert("El promedio es: "+promedio)
 }
 function PrecioFinal () 
@@ -34,7 +34,7 @@ function PrecioFinal ()
 	precioTres=document.getElementById('PrecioTres').value;
 
 	sumaproductos = parseFloat(precioUno) + parseFloat(precioDos) + parseFloat(precioTres);
-    iva = (parseFloat(sumaproductos) * 21) / 100;
+    iva = (sumaproductos * 21) / 100;
     preciofinal = parseFloat(sumaproductos) + parseFloat(iva);
     alert("El precio final (más IVA 21%) es de: "+preciofinal);
 
