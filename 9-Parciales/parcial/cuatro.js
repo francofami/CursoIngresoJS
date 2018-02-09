@@ -4,6 +4,7 @@ function Mostrar()
 	var numeroDos;
 	var multiplicacion;
 	var resta;
+	var suma; 
 
 	numeroUno = prompt("Ingrese un numero: ");
 	numeroDos = prompt("Ingrese otro numero: ");
@@ -11,8 +12,8 @@ function Mostrar()
 	numeroUno=parseFloat(numeroUno);
 	numeroDos=parseFloat(numeroDos);
 
-	/* Es necesario pasar los numeros a parseFloat/Int antes de arrancar con los if y no despues del ultimo else
-	porque de esa manera no me funcíonó. */
+	/* SIEMPRE que quiera pasar a float o a int hacerlo antes de los if */
+
 
 	if(numeroUno==numeroDos)
 	{
@@ -26,7 +27,11 @@ else
 		document.write(resta);
 	}
 else
-	
+	{
 	suma=numeroUno+numeroDos;
 	document.write(suma);
+	}
+
+/* Cuando le asigno mas de una línea a una función, las líneas deben estar dentro de {} */
+
 }
