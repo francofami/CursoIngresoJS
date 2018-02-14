@@ -29,7 +29,7 @@ function CalcularPrecio ()
  	}
  else if(cantidadLamparitas==5)
  	{
- 		if(marca=="ArgentinaLuz")
+ 		if(marca=="ArgentinaLuz")  //Siempre que una opcion sea texto ponerla con comillas
  		{
 			precioFinal=precioInicial*0.6;
  			document.getElementById('precioDescuento').value=precioFinal;
