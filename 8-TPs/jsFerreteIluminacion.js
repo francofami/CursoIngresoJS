@@ -10,5 +10,73 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
-}
+ 	var cantidadLamparitas;
+ 	var precioInicial;
+ 	var precioFinal;
+ 	var marca;
+ 	var precioConImpuesto;
+ 	var impuesto;
+
+ 	cantidadLamparitas=document.getElementById('Cantidad').value;
+ 	marca=document.getElementById('Marca').value;
+
+ 	precioInicial=cantidadLamparitas*35;
+
+ 	if(cantidadLamparitas>=6)
+ 	{
+ 		precioFinal=precioInicial/2;
+ 		document.getElementById('precioDescuento').value=precioFinal;
+ 	}
+ else if(cantidadLamparitas==5)
+ 	{
+ 		if(marca=="ArgentinaLuz")
+ 		{
+			precioFinal=precioInicial*0.6;
+ 			document.getElementById('precioDescuento').value=precioFinal;
+ 		}	
+ 	else 
+ 		{
+ 			precioFinal=precioInicial*0.7;
+ 			document.getElementById('precioDescuento').value=precioFinal;
+ 		}	
+ 	}
+ else if(cantidadLamparitas==4)
+ 	{
+ 		if(marca=="ArgentinaLuz" || marca=="FelipeLamparas")
+ 		{
+ 			precioFinal=precioInicial*0.75;
+ 			document.getElementById('precioDescuento').value=precioFinal;
+ 		}
+ 	else
+ 		{
+ 			precioFinal=precioInicial*0.8;
+ 			document.getElementById('precioDescuento').value=precioFinal;
+ 		}	
+ 	}
+ else if(cantidadLamparitas==3)
+ 	{
+ 		if(marca=="ArgentinaLuz")
+ 		{
+ 			precioFinal=precioInicial*0.85;
+ 			document.getElementById('precioDescuento').value=precioFinal;
+ 		}
+ 	else if(marca=="FelipeLamparas")
+ 		{
+ 			precioFinal=precioInicial*0.9;
+ 			document.getElementById('precioDescuento').value=precioFinal;
+ 		}
+ 	else
+ 		{
+ 			precioFinal=precioInicial*0.95;
+ 			document.getElementById('precioDescuento').value=precioFinal;
+ 		}	
+ 	}
+
+ if(precioFinal>120)
+ {
+ 	impuesto=precioFinal*0.1;
+ 	precioConImpuesto=precioFinal*1.10;
+ 	document.getElementById('precioDescuento').value=precioConImpuesto;
+ 	alert("IIBB Usted pago "+impuesto);
+ }
+}	
