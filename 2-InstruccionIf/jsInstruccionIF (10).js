@@ -10,12 +10,18 @@ function Mostrar()
 	{
 		alert("EXCELENTE");
 	}
-else
-	if(nota>=4 && nota<9)
+	else
 	{
-		alert("APROBÓ");
+		if(nota>=4 && nota<9)
+		{
+			alert("APROBÓ");
+		}	
 	}
-else
-	alert("Vamos, la proxima se puede");
+	else
+	{
+		alert("Vamos, la proxima se puede");
+	}
+	
+	console.info(nota); // Esto lo agregué para poder ver en la consola que nota se sacó cada uno.
 
 }//FIN DE LA FUNCIÓN
