@@ -10,6 +10,96 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
+
+	//HECHO CON IF Y SWITCH
+
+	var precioLampara;
+	var descuento;
+	var cantidadLamparas;
+	var marcaLamparas;
+	var precioInicial;
+	var precioFinal;
+	var precioConImpuesto;
+	var impuesto;
+
+	cantidadLamparas=document.getElementById('Cantidad').value;
+
+	marcaLamparas=document.getElementById('Marca').value;
+
+	precioLampara= 35;
+
+	descuento = 1; //Esto es para aquellos casos en los que no se apliquen descuento
+
+	if(cantidadLamparas>5)
+	{
+		descuento=0.5;
+	}
+
+	if(cantidadLamparas==5)
+	{
+		switch(marcaLamparas)
+		{
+			case "ArgentinaLuz":
+
+				descuento=0.6;
+				break;
+			
+			default:
+
+				descuento=0.7;
+		}
+	}
+
+	if(cantidadLamparas==4)
+	{
+		switch(marcaLamparas)
+		{
+			case "ArgentinaLuz":
+			case "FelipeLamparas":
+
+				descuento=0.75;
+				break;
+			
+			default:
+				descuento=0.8;
+		}
+	}
+
+	if(cantidadLamparas==3)
+	{
+		switch(marcaLamparas)
+		{
+			case "ArgentinaLuz":
+				descuento=0.85;
+				break;
+			case "FelipeLamparas":
+				descuento=0.9;
+				break;
+			default:
+				descuento=0.95;
+		}
+	}
+
+	precioInicial=precioLampara*cantidadLamparas;
+
+	precioFinal=precioInicial*descuento;
+
+	if(precioFinal>120)
+	{
+		precioConImpuesto=precioFinal*0.9;
+		impuesto=precioConImpuesto*0.1;
+
+		alert("Usted pago "+impuesto+" de IIBB.");
+	}
+
+	document.getElementById('precioDescuento').value=precioFinal;
+
+	
+
+/*
+
+	HECHO CON IF ELSE:
+
  	var cantidadLamparitas;
  	var precioInicial;
  	var precioFinal;
@@ -71,6 +161,10 @@ function CalcularPrecio ()
  			document.getElementById('precioDescuento').value=precioFinal;
  		}	
  	}
+ else if(cantidadLamparitas==2 || cantidadLamparitas==1) //Acá le agregué si compro 1 o 2 lamparitas, en este caso no hay descuento
+ 	{
+		document.getElementById('precioDescuento').value=precioInicial;
+ 	}
 
  if(precioFinal>120)
  {
@@ -79,4 +173,6 @@ function CalcularPrecio ()
  	document.getElementById('precioDescuento').value=precioConImpuesto;
  	alert("IIBB Usted pago "+impuesto);
  }
+
+*/
 }	
