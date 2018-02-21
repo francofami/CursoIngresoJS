@@ -17,7 +17,7 @@ function Mostrar()
 
 		if(i==5)
 		{
-			continue; //Aca no me toma el 5, es como si nunca hubiese salido 5
+			continue; //El continue vuelve a empezar el for, en este caso no me toma el 5, es como si nunca hubiese salido 5
 		}
 
 		document.write("Despues de continue");
