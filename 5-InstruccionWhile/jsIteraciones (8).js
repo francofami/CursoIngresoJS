@@ -5,6 +5,8 @@ function Mostrar()
 	var positivo=0;
 	var negativo=1;
 	var numero;
+	var contadorPositivos=0;
+	var contadorNegativos=0;
 
 	var respuesta='si';
 
@@ -16,13 +18,25 @@ function Mostrar()
 		{
 			numero=parseInt(numero);
 			positivo+=numero;
+			contadorPositivos++;
 		}
 		else if(numero<0)
 		{
 			negativo*=numero;
+			contadorNegativos++;
 		}
 
 		respuesta = prompt("Responda si para ingresar otro número.");
+	}
+
+	if(contadorPositivos==0)
+	{
+		positivo="No se ingresaron positivos"
+	}
+
+	if(contadorNegativos==0)
+	{
+		negativo="No se ingresaron negativos"
 	}
 
 document.getElementById('suma').value=positivo;
