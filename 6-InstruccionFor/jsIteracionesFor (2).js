@@ -17,7 +17,7 @@ function Mostrar()
 
 		if(i==5)
 		{
-			continue;
+			continue; //Aca no me toma el 5, es como si nunca hubiese salido 5
 		}
 
 		document.write("Despues de continue");
