@@ -6,7 +6,7 @@ function Mostrar()
 	var menorImporte;
 	var mayorImporte;
 
-	while(contador<5)
+	while(contador<24)
 	{
 		contador++;
 
