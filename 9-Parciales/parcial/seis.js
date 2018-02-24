@@ -17,7 +17,7 @@ function Mostrar()
 			importe=prompt("Ingrese importe mayor a 0:");
 		}
 
-		importe=parseFloat(importe);
+		importe=parseFloat(importe); //Lo hago para que me levante un numero y no ascii
 
 		if(contador==1)
 		{
