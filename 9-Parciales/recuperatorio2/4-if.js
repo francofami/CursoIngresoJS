@@ -7,14 +7,13 @@ function Mostrar()
 	var resta;
 
 	numeroUno=prompt("Ingrese un numero:");
-	numeroDos=prompt("Ingrese otro numero:");
-
 	numeroUno=parseFloat(numeroUno);
-	numeroDos=parseFloat(numeroDos);
+
+	numeroDos=prompt("Ingrese otro numero:");
+	numeroDos=parseFloat(numeroDos);	
 
 //Recordar poner los parseFloat antes del primer if
 	
-
 	if(numeroUno==numeroDos)
 	{
 		multiplicar=numeroUno*numeroDos;

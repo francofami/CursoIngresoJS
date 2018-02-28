@@ -8,13 +8,13 @@ function Mostrar()
 	var metrosAlambreTotal
 
 	ancho=document.getElementById('ancho').value;
+	metrosAlambreAncho=parseFloat(metrosAlambreAncho);
+
 	largo=document.getElementById('largo').value; //En el documento HTML le borré donde decía readonly en la parte del ID para poder cargar el largo en la pantalla.
+	metrosAlambreLargo=parseFloat(metrosAlambreLargo);
 
 	metrosAlambreAncho = ancho*12;
 	metrosAlambreLargo=largo*12;
-
-	metrosAlambreLargo=parseFloat(metrosAlambreLargo);
-	metrosAlambreAncho=parseFloat(metrosAlambreAncho);
 
 	metrosAlambreTotal=metrosAlambreLargo+metrosAlambreAncho;
 
