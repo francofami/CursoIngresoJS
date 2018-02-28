@@ -7,11 +7,11 @@ function Mostrar()
 	var contenedorMasPesado;
 	var contenedorMenosPesado;
 
-	while(contador<=5)
+	while(contador<=50)
 	{
 		peso=prompt("Ingrese peso: ");
 	
-		while(peso<=0)
+		while(peso<=0 || peso=="" || isNaN(peso))
 		{
 			peso=prompt("¡Error! Ingrese peso (mayor a 0): ");
 		}

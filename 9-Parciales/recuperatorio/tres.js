@@ -7,12 +7,13 @@ function Mostrar()
 	var promedio;
 
 	precioUno=document.getElementById('precioUno').value;
-	precioDos=document.getElementById('precioDos').value;
-	precioTres=document.getElementById('precioTres').value;
-
 	precioUno=parseFloat(precioUno);
+
+	precioDos=document.getElementById('precioDos').value;
 	precioDos=parseFloat(precioDos);
-	precioTres=parseFloat(precioTres);
+
+	precioTres=document.getElementById('precioTres').value;
+	precioTres=parseFloat(precioTres);	
 
 	suma=precioUno+precioDos+precioTres;
 
